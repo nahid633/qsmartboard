@@ -1,0 +1,57 @@
+<div class="main-container container-fluid">
+<div class="row">
+<div id="point-container" class="col-md-4 col-lg-4 col-sm-4">
+<table class="table table-responsive table-striped">
+<thead>
+<tr>
+<th>{{'point' | translate}}</th>
+<th>{{'ticket'| translate}}</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let data of serviceData">
+<td>{{data.point}}</td>
+<td>{{data.ticket}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="media-container" class="col-md-8 col-lg-8 col-sm-8">
+  <div class="row header">
+  <div class="col-md-4">{{today |date:'HH:mm:ss'}}</div>
+  <div class="col-md-4">{{header|translate}}</div>
+  <div class="col-md-4">{{today| date:'yyyy-MM-dd'}}</div>
+</div>
+  <div class="row">
+    <div id="message" [@divState]="state">
+      <h1  style="text-align: center;font-size: 7em">
+       Bilet-{{serviceData[0].ticket}}  Masa-{{serviceData[0].point}}
+        </h1>
+    </div>
+    <!--<div  id="myCarousel"  class="carousel slide" data-interval="10" data-slide-to="2" data-wrap="false" (data-target)="nextimg()" data-ride="carousel" #imgRef >-->
+      <!--<div  class="carousel-inner" role="listbox" >-->
+        <!--<div *ngFor="let url of sourcesImg;let k = index" class="item" [ngClass]="{active: isActive(url)}">-->
+          <!--<img [src]="'assets/image/'+ url" alt="{{url}}" style="height:95vh;">-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <carousel id="myCarousel"  [interval]="5000" [noWrap]="false" [(activeSlide)]="activeSlideIndex" #imgRef>
+      <slide  *ngFor="let image of sourcesImg; let index=index"  [ngClass]="{active:isActive()}" >
+        <img [src]="'assets/image/'+image">
+      </slide>
+    </carousel>
+    <video class="video" (ended)="nextClip()" onloadedmetadata="muted = true" autoplay="true" #vidRef >
+        <source  [src]="'assets/video/'+sourcesVid[0].url" type="video/mp4"  />
+        <source  [src]="'assets/video/'+sourcesVid[0].url" type="video/ogg"  />
+        <source  [src]="'assets/video/'+sourcesVid[0].url" type="video/webm"  />
+      {{'error'| translate}}
+      </video>
+  </div>
+</div>
+</div>
+<div id="bottom-container">
+<marquee id="marquee" truespeed="1">
+{{'footer'|translate}}
+</marquee>
+</div>
+</div>

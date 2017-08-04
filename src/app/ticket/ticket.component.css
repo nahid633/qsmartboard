@@ -1,0 +1,97 @@
+th{
+  text-align: center;
+  background-color: #5DBCD2;
+  color:red;
+  font-size: 300%;
+}
+.table td{
+  vertical-align: middle;
+  /*font-weight: bold;*/
+  font-size: 200%;
+}
+.main-container{
+  display: block;
+}
+.table{
+  height: 95vh;
+}
+#point-container{
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  width: 30vw;
+  text-align: center;
+  height: 95vh;
+  /*border: 1px solid #5DBCD2;*/
+  padding: 0 !important;
+}
+#media-container{
+  width: 70vw;
+  height: 95vh;
+  /*border: 1px solid #5DBCD2;*/
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+#bottom-container{
+  position: fixed;
+  bottom:0;
+  margin-left: -15px;
+  width: 100vw;
+  height: 5vh;
+  /*border: 1px solid #5DBCD2;*/
+  background-color:#5DBCD2 ;
+  padding: 0 !important;
+}
+.header{
+  color: red;
+  font-size: 1.6em;
+  text-align: center;
+  background-color:#5DBCD2 ;
+  height: 5vh;
+  font-weight: bold;
+}
+.video{
+
+   /*margin-left: -15px;*/
+    /*margin-top: -50px;*/
+  position: relative;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: 95vh;
+  z-index: -100;
+  background-size: cover;
+  overflow: hidden;
+}
+#myCarousel{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: 95vh;
+  z-index: -100;
+  background-size: cover;
+  overflow: hidden;
+}
+#message{
+  padding: 25%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-weight: bold;
+  width: 70vw;
+  height: 90vh;
+  overflow: hidden;
+  background-color: #5DBCD2;
+}
+ #marquee{
+   color: #ffffff;
+   font-size: x-large;
+   line-height: 40px;
+   text-align: center;
+   vertical-align: middle;
+ }
+
